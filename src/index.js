@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+import theme from '@chakra-ui/theme'
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+
+console.info('theme', theme)
+// const config = {
+//   useSystemColorMode: false,
+//   initialColorMode: 'light',
+// }
+// const customTheme = extendTheme({ config })
+
+// 1. 设置默认颜色模式
+theme.config.initialColorMode = 'light'
+
+// 2.使用操作系统使用的颜色模式
+// theme.config.useSystemColorMode = true
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ChakraProvider theme={theme}>
+    <CSSReset />
     <App />
-  </React.StrictMode>,
+  </ChakraProvider>,
   document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)

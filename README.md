@@ -22,3 +22,24 @@ You will also see any lint errors in the console.
 # 效果图 - 注册
 
 <img src="./images/reg.png">
+
+# 效果图 - 注册成功
+
+<img src="./images/reg-success.png">
+
+
+# 效果图 - 注册失败
+
+<img src="./images/reg-error.png">
+
+
+# 效果图 - 登录成功
+
+<img src="./images/login-success.png">
+
+
+## hooks 自定义 input hooks
+- 为`Input`封装自定义钩子, `onChange handler`
+
+
+
